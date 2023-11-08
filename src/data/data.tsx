@@ -13,7 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.png';
+// import heroImage from '../images/header-background.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.png';
 import porfolioImage2 from '../images/portfolio/portfolio-2.png';
 import porfolioImage3 from '../images/portfolio/portfolio-3.png';
@@ -39,6 +39,7 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
+import ParticlesBackground from '../components/Sections/ParticlesBackground';
 
 /**
  * Page meta data
@@ -68,7 +69,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  * Hero section
  */
 export const heroData: Hero = {
-  imageSrc: heroImage,
+//  imageSrc: heroImage,
   name: `I'm Madhuja Mitra.`,
   description: (
     <>
@@ -76,11 +77,6 @@ export const heroData: Hero = {
         I'm a Vancouver based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
         at <strong className="text-stone-100">Infosys</strong> helping build a modern, responsive and site builder.
       </p>
-      {/* <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
-      </p> */}
     </>
   ),
   actions: [
@@ -96,6 +92,7 @@ export const heroData: Hero = {
       primary: false,
     },
   ],
+  backgroundComponent: <ParticlesBackground />
 };
 
 /**
