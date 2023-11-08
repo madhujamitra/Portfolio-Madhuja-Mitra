@@ -1,29 +1,20 @@
-import React, { useCallback } from 'react';
+import React, {useCallback, useMemo} from 'react';
 import Particles from 'react-tsparticles';
-import { loadSlim } from "tsparticles-slim";
-import { Engine } from "tsparticles-engine";
-import { Container } from "tsparticles-engine";
+import {Container,Engine} from "tsparticles-engine";
+import {loadSlim} from "tsparticles-slim";
 
+const ParticlesBackground: React.FC = React.memo(() => {
+    const particlesInit = useCallback(async (engine: Engine) => {
+        // Init function body
+        await loadSlim(engine);
+    }, []);
 
+    const particlesLoaded = useCallback(async (container: Container | undefined) => {
+        // Loaded function body
+        console.log(container);
+    }, []);
 
-const ParticlesBackground: React.FC = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    // Init function body
-    await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    // Loaded function body
-    console.log(container);
-  }, []);
-
-
-  return (
-    <Particles
-    id="tsparticles"
-    init={particlesInit}
-    loaded={particlesLoaded}
-    options={{
+    const particlesOptions = useMemo(() => ({
         background: {
             color: {
                 value: "#000000",
@@ -87,13 +78,20 @@ const ParticlesBackground: React.FC = () => {
                 type: "circle",
             },
             size: {
-                value: { min: 1, max: 5 },
+                value: {min: 1, max: 5},
             },
         },
         detectRetina: true,
-    }}
-    />
-  );
-};
+    }), []); 
+
+    return (
+        <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={particlesOptions}
+        />
+    );
+});
 
 export default ParticlesBackground;

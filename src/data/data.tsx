@@ -13,6 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
+import ParticlesBackground from '../components/Sections/ParticlesBackground';
 // import heroImage from '../images/header-background.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.png';
 import porfolioImage2 from '../images/portfolio/portfolio-2.png';
@@ -39,7 +40,6 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
-import ParticlesBackground from '../components/Sections/ParticlesBackground';
 
 /**
  * Page meta data
