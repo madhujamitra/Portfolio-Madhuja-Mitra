@@ -1,6 +1,6 @@
-import React, {useCallback, useMemo} from 'react';
+import React, {useCallback,useMemo} from 'react';
 import Particles from 'react-tsparticles';
-import {Container,Engine} from "tsparticles-engine";
+import {Container,Engine,ISourceOptions} from "tsparticles-engine";
 import {loadSlim} from "tsparticles-slim";
 
 const ParticlesBackground: React.FC = React.memo(() => {
@@ -14,7 +14,7 @@ const ParticlesBackground: React.FC = React.memo(() => {
         console.log(container);
     }, []);
 
-    const particlesOptions = useMemo(() => ({
+    const particlesOptions : ISourceOptions = useMemo(() => ({
         background: {
             color: {
                 value: "#000000",
@@ -82,6 +82,7 @@ const ParticlesBackground: React.FC = React.memo(() => {
             },
         },
         detectRetina: true,
+
     }), []); 
 
     return (
