@@ -15,9 +15,12 @@ import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import ParticlesBackground from '../components/Sections/ParticlesBackground';
 // import heroImage from '../images/header-background.png';
-import porfolioImage1 from '../images/portfolio/portfolio-1.png';
-import porfolioImage2 from '../images/portfolio/portfolio-2.png';
-import porfolioImage3 from '../images/portfolio/portfolio-3.png';
+import DumMachine from '../images/portfolio/DumMachine.png';
+import HireSwift from '../images/portfolio/HireSwift.png';
+import MarkdownImage from '../images/portfolio/MarkdownImage.png';
+import Muhhum from '../images/portfolio/Muhhum.png';
+ //import jobportal from '../images/portfolio/HireSwift.png';
+// import porfolioImage3 from '../images/portfolio/portfolio-3.png';
 // import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 // import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 // import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
@@ -26,7 +29,7 @@ import porfolioImage3 from '../images/portfolio/portfolio-3.png';
 // import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 // import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 // import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.png';
+import profilepic from '../images/portfolio/portfolio-4.jpg';
 import testimonialImage from '../images/testimonial.png';
 import {
   About,
@@ -74,8 +77,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Vancouver based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Infosys</strong> helping build a modern, responsive and site builder.
+        I'm a Vancouver based <strong className="text-stone-100">Full Stack Software Engineer</strong>,  I'm a Vancouver-based Full Stack and DevOps Engineer, currently helping to build a modern, responsive site builder.
       </p>
     </>
   ),
@@ -100,15 +102,17 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I am a dedicated Sr. Software Engineer with a strong foundation in React, Next.js, and TypeScript. Throughout my career, I've taken pride in enhancing web performance and user experiences, leading agile teams, and pioneering innovative digital solutions. With a degree in Electronics and Communication from Dr. A. P. J. Abdul Kalam Technical University, I am a firm believer in continuous learning and always seek opportunities that promote professional advancement. Beyond the technical realm, 
-  I find joy in photograpght, hiking, playing the guitar, and indulging in delectable cuisines.`,
+  description: `I am a dedicated Sr. Software Engineer with a strong foundation in React, Next.js, TypeScript, Node.js, Docker, and Python. Throughout my career, I've taken pride in enhancing web performance and user experiences, leading agile teams, and pioneering innovative digital solutions. With a degree in Electronics and Communication from Dr. A. P. J. Abdul Kalam Technical University and a Diploma in Software Engineering from BrainStation, I am a firm believer in continuous learning and always seek opportunities that promote professional advancement. My technical skills are further complemented by experience with CI/CD practices, which enable efficient and reliable software deployment workflows. Beyond the technical realm, 
+  I find joy in photography, hiking, playing the guitar, and indulging in delectable cuisines.`,
   aboutItems: [
     {label: 'Location', text: 'Vancouver, BC', Icon: MapIcon},
     {label: 'Age', text: '30', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
-    {label: 'Interests', text: 'Food,travelling, Music, Photography', Icon: SparklesIcon},
-    {label: 'Study', text: 'Dr. A. P. J. Abdul Kalam Technical University', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Infosys', Icon: BuildingOffice2Icon},
+    {label: 'Interests', text: 'Food,Travelling, Music, Photography', Icon: SparklesIcon},
+    // {label: 'Study', text: 'Diploma in Software Enginnering From Brainstation', Icon: AcademicCapIcon},
+    // // {label: 'Employment', text: 'Infosys', Icon: BuildingOffice2Icon},
+    // {label: 'Study', text: 'Enigneering in Electronics and Communication From UPTU', Icon: AcademicCapIcon},
+    
   ],
 };
 
@@ -124,8 +128,8 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 2,
+        name: 'Hindi',
+        level: 8,
       },
       {
         name: 'Spanish',
@@ -137,19 +141,15 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'ReactJs',
         level: 9,
       },
       {
-        name: 'Angular',
+        name: 'TypeScript',
         level: 8,
       },
       {
         name: 'Next.JS',
-        level: 7,
-      },
-      {
-        name: 'Shopify',
         level: 7,
       },
     ]
@@ -158,16 +158,16 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
+        name: 'NodeJS',
+        level: 9,
+      },
+      {
+        name: 'ExpressJS',
+        level: 9,
+      },
+      {
+        name: 'MySql',
         level: 8,
-      },
-      {
-        name: 'Python',
-        level: 5,
-      },
-      {
-        name: '.net',
-        level: 6,
       },
     ],
   },
@@ -194,78 +194,49 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
+    {
+    title: 'HireSwift',
+    description: 'A job portal where each posting is capped at 5 applications, then closed for review, with the option to reopen if no suitable candidates are found.',
+    url: 'https://github.com/madhujamitra/Capstone-project',
+    image:HireSwift,
+  },
   {
     title: 'Markdown previewer',
     description: 'Created markdown converter using react and open source Libraries',
     url: 'https://markdown-convertor-react.netlify.app/',
-    image: porfolioImage1,
+    image: MarkdownImage,
   },
   {
     title: 'Drum Machine',
     description: 'Created a Drum using sound which displays content along with every press of new sound.',
     url: 'https://drummachine-reactjs.netlify.app/',
-    image: porfolioImage2,
+    image: DumMachine,
   },
   {
     title: 'Muhhum website',
     description: 'Crate e-comm platform with shopify and other plugins',
     url: 'https://muhhum.com/',
-    image: porfolioImage3,
+  image:Muhhum ,
   },
-  // {
-  //   title: 'Project title 4',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage4,
-  // },
+
   // {
   //   title: 'Project title 5',
   //   description: 'Give a short description of your project here.',
   //   url: 'https://reactresume.com',
-  //   image: porfolioImage5,
+  //   image: porfolioImage1,
   // },
-  // {
-  //   title: 'Project title 6',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage6,
-  // },
-  // {
-  //   title: 'Project title 7',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage7,
-  // },
-  // {
-  //   title: 'Project title 8',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage8,
-  // },
-  // {
-  //   title: 'Project title 9',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage9,
-  // },
-  // {
-  //   title: 'Project title 10',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage10,
-  // },
-  // {
-  //   title: 'Project title 11',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage11,
-  // },
+  
+  
 ];
 
-/**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
+
 export const education: TimelineItem[] = [
+  {
+    date: 'March 2024',
+    location: 'BrainStation,Vancouver',
+    title: 'Diploma in Software Engineering',
+    content: <p>Completed my Diploma in Software Engineering at BrainStation in 2024, which served as a comprehensive refresh and enhancement of my skills in full-stack development, further advancing my career in technology.</p>,
+  },
   {
     date: 'July 2015',
     location: 'Dr.A.P.J. Abdul Kalam Technical University',
@@ -282,7 +253,18 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'December 2021 - Present',
+    date: 'Feb 2024',
+    location: 'Yunwenverse Media Inc',
+    title: 'Senior software Developer (Part-time)',
+    content: (
+      <p>
+       Created features and functionality of a WordPress site, focusing on key aspects of website development to improve performance and
+       user experience.
+      </p>
+    ),
+  },
+   {
+    date: 'December 2021 - December 2023',
     location: 'Infosys',
     title: 'Senior software Developer',
     content: (
