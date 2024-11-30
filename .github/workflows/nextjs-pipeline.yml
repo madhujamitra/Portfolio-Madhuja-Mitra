@@ -1,0 +1,45 @@
+name: CI/CD for Next.js Portfolio
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests targeting the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Replace with your project's Node.js version
+          cache: 'yarn'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: yarn install
+
+      # Step 4: Build the project
+      - name: Build Next.js project
+        run: yarn build
+
+      # Step 5: Test the project
+      - name: Run tests
+        run: yarn test
+
+      # Optional Step: Deploy to Vercel (comment this out for now)
+      # - name: Deploy to Vercel
+      #   uses: amondnet/vercel-action@v20
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-args: '--prod'
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
