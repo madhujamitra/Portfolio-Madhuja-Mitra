@@ -20,7 +20,7 @@ const Home: FC = memo(() => {
       <Hero />
       <About />
       <SoftwareWork />
-      <Photograph/>
+      {/* <Photograph/> */}
       <Footer />
     </Page>
   );
