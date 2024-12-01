@@ -1,8 +1,7 @@
-import classNames from 'classnames';
-import Image from 'next/image';
+
 import {FC, memo} from 'react';
 
-import {photograph, SectionId} from '../../data/data';
+import {SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
 const Photograph: FC = memo(() => {

@@ -9,9 +9,7 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import ParticlesBackground from '../components/Sections/ParticlesBackground';
 import DumMachine from '../images/portfolio/DumMachine.png';
 import HireSwift from '../images/portfolio/HireSwift.png';
 import MarkdownImage from '../images/portfolio/MarkdownImage.png';
@@ -85,7 +83,7 @@ export const heroData: Hero = {
     //   primary: false,
     // },
   ],
-  // backgroundComponent: <ParticlesBackground />
+
 };
 
 /**
@@ -338,7 +336,6 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/madhujamitra'},
-  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/11493962/madhuja-mitra'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/madhuja-mitra-0a083377/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/madhujamitra/'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/MADHUJAmitra'},
