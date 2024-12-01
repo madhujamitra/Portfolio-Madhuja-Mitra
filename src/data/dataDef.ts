@@ -25,7 +25,7 @@ export interface Hero {
   name: string;
   description: JSX.Element;
   actions: HeroActionItem[];
-  backgroundComponent: React.ReactNode;
+  //backgroundComponent: React.ReactNode;
 }
 
 interface HeroActionItem {
@@ -148,4 +148,9 @@ export interface Social {
   label: string;
   Icon: FC<IconProps>;
   href: string;
+}
+
+export interface Photograph {
+  label: string;
+  href: string; 
 }

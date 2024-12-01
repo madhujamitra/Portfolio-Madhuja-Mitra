@@ -6,9 +6,9 @@ import ResumeSection from './ResumeSection';
 import {SkillGroup} from './Skills';
 import TimelineItem from './TimelineItem';
 
-const Resume: FC = memo(() => {
+const SoftwareWork: FC = memo(() => {
   return (
-    <Section className="bg-neutral-100" sectionId={SectionId.Resume}>
+    <Section className="bg-neutral-100" sectionId={SectionId.SoftwareWork}>
       <div className="flex flex-col divide-y-2 divide-neutral-300">
         <ResumeSection title="Education">
           {education.map((item, index) => (
@@ -33,5 +33,5 @@ const Resume: FC = memo(() => {
   );
 });
 
-Resume.displayName = 'Resume';
-export default Resume;
+SoftwareWork.displayName = 'SoftwareWork';
+export default SoftwareWork;

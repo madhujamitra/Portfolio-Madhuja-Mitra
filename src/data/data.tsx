@@ -12,21 +12,10 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import ParticlesBackground from '../components/Sections/ParticlesBackground';
-// import heroImage from '../images/header-background.png';
 import DumMachine from '../images/portfolio/DumMachine.png';
 import HireSwift from '../images/portfolio/HireSwift.png';
 import MarkdownImage from '../images/portfolio/MarkdownImage.png';
 import Muhhum from '../images/portfolio/Muhhum.png';
- //import jobportal from '../images/portfolio/HireSwift.png';
-// import porfolioImage3 from '../images/portfolio/portfolio-3.png';
-// import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-// import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-// import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/portfolio/portfolio-4.jpg';
 import testimonialImage from '../images/testimonial.png';
 import {
@@ -35,6 +24,7 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
+  Photograph,
   PortfolioItem,
   SkillGroup,
   Social,
@@ -62,6 +52,9 @@ export const SectionId = {
   Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
+  SoftwareWork: 'software-work', 
+  Photography: 'photography',
+  
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -75,7 +68,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Vancouver based <strong className="text-stone-100">Full Stack Software Engineer</strong>,  I'm a Vancouver-based Full Stack and DevOps Engineer, currently helping to build a modern, responsive site builder.
+      I'm a Vancouver-based <strong className='text-stone-100'>Full Stack Software Engineer</strong>, a teacher in software development, and a freelance photographer with experience in creating functional software solutions and capturing professional-grade photography.
       </p>
     </>
   ),
@@ -85,14 +78,14 @@ export const heroData: Hero = {
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
-    },
+    }
+    // {
+    //   href: `#${SectionId.Contact}`,
+    //   text: 'Contact',
+    //   primary: false,
+    // },
   ],
-  backgroundComponent: <ParticlesBackground />
+  // backgroundComponent: <ParticlesBackground />
 };
 
 /**
@@ -345,8 +338,16 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/madhujamitra'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/11493962/madhuja-mitra'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/11493962/madhuja-mitra'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/madhuja-mitra-0a083377/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/madhujamitra/'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/MADHUJAmitra'},
+];
+
+
+export const photograph: Photograph[] = [
+  {
+    label: 'Photography Portfolio', // Provide a meaningful label
+    href: 'https://example.com/photography', // Link to the photography portfolio
+  },
 ];
