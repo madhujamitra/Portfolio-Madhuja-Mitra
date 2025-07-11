@@ -66,7 +66,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      I'm a Vancouver-based <strong className='text-stone-100'>Full Stack Software Engineer</strong>, a teacher in software development, and a freelance photographer with experience in creating functional software solutions and capturing professional-grade photography.
+      I'm a Vancouver-based <strong className='text-stone-100'>Full Stack Software Engineer</strong> specializing in AI-powered applications, with expertise in building scalable microservices, implementing advanced prompt engineering solutions, and integrating cutting-edge LLM APIs to deliver innovative digital solutions.
       </p>
     </>
   ),
@@ -91,13 +91,12 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I am a dedicated Sr. Software Engineer with a strong foundation in React, Next.js, TypeScript, Node.js, Docker, and Python. Throughout my career, I've taken pride in enhancing web performance and user experiences, leading agile teams, and pioneering innovative digital solutions. With a degree in Electronics and Communication from Dr. A. P. J. Abdul Kalam Technical University and a Diploma in Software Engineering from BrainStation, I am a firm believer in continuous learning and always seek opportunities that promote professional advancement. My technical skills are further complemented by experience with CI/CD practices, which enable efficient and reliable software deployment workflows. Beyond the technical realm, 
-  I find joy in photography, hiking, playing the guitar, and indulging in delectable cuisines.`,
-  aboutItems: [
-    {label: 'Location', text: 'Vancouver, BC', Icon: MapIcon},
-    {label: 'Age', text: '30', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
-    {label: 'Interests', text: 'Food,Travelling, Music, Photography', Icon: SparklesIcon},
+  description: `I am a dedicated Software Engineer specializing in AI-powered applications and full-stack development with expertise in React, Next.js, TypeScript, Node.js, Python, and cloud technologies. Throughout my career, I've architected scalable microservices, implemented advanced prompt engineering solutions, and integrated cutting-edge LLM APIs including OpenAI GPT and Google Gemini. My technical expertise spans containerization with Docker and Kubernetes, serverless architectures, and real-time data processing systems. With a degree in Electronics and Communication from Dr. A. P. J. Abdul Kalam Technical University and a Diploma in Software Engineering from BrainStation, I continuously evolve with emerging technologies, particularly in artificial intelligence and machine learning. My experience includes building AI-driven content generation platforms, optimizing distributed systems for performance, and leading cross-functional teams in delivering innovative digital solutions that drive measurable business impact.`,
+      aboutItems: [
+      {label: 'Location', text: 'Vancouver, BC', Icon: MapIcon},
+      {label: 'Age', text: '30', Icon: CalendarIcon},
+      {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
+      {label: 'Specialization', text: 'AI/ML, Full-Stack Development, Cloud Architecture', Icon: SparklesIcon},
     // {label: 'Study', text: 'Diploma in Software Enginnering From Brainstation', Icon: AcademicCapIcon},
     // // {label: 'Employment', text: 'Infosys', Icon: BuildingOffice2Icon},
     // {label: 'Study', text: 'Enigneering in Electronics and Communication From UPTU', Icon: AcademicCapIcon},
@@ -155,6 +154,10 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
+        name: 'Python',
+        level: 9,
+      },
+      {
         name: 'MySql',
         level: 8,
       },
@@ -174,6 +177,31 @@ export const skills: SkillGroup[] = [
       {
         name: 'Flutter',
         level: 3,
+      },
+    ],
+  },
+  {
+    name: 'AI/ML & Cloud',
+    skills: [
+      {
+        name: 'OpenAI GPT APIs',
+        level: 9,
+      },
+      {
+        name: 'Google Gemini',
+        level: 8,
+      },
+      {
+        name: 'Prompt Engineering',
+        level: 9,
+      },
+      {
+        name: 'AWS',
+        level: 7,
+      },
+      {
+        name: 'Docker/Kubernetes',
+        level: 8,
       },
     ],
   },
@@ -232,45 +260,70 @@ export const education: TimelineItem[] = [
     title: 'Engineering in Electronics and communication',
     content: <p>Graduated in July 2015, where I honed my problem-solving skills and analytical thinking, and problem solving skill.</p>,
   },
-  {
-    date: 'March 2011',
-    location: 'Nutan Vidya Mindir',
-    title: 'High School',
-    content: <p>Completed my High School at Nutan Vidya Mandir in 2011, where I developed a strong foundation in science and computer science, laying the groundwork for my future in technology.</p>,
-  },
+
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'Feb 2024',
-    location: 'Yunwenverse Media Inc',
-    title: 'Senior software Developer (Part-time)',
+    date: 'Aug 2024 - April 2025',
+    location: 'Actofy.ai, Vancouver',
+    title: 'Software Engineer',
     content: (
       <p>
-       Created features and functionality of a WordPress site, focusing on key aspects of website development to improve performance and
-       user experience.
-      </p>
-    ),
-  },
-   {
-    date: 'December 2021 - December 2023',
-    location: 'Infosys',
-    title: 'Senior software Developer',
-    content: (
-      <p>
-        Led a developer team in Agile Scrum, achieving rapid feature releases and designing a frontend architecture for Bupa Global's scheduling system. 
-        Enhanced web performance by 42% and revamped the site for WCAG compliance, boosting user accessibility by 40%.
+        Built AI-powered content generation platform from scratch using Python automation scripts and custom LLM integrations with Gemini and ChatGPT APIs.
+        Engineered advanced prompt engineering solutions that optimized AI workflows, improving content quality by 40% through strategic model fine-tuning.
+        Developed full-stack microservices architecture with mobile frontend and TypeScript serverless backend, leveraging Supabase for real-time data management.
+        Implemented asynchronous content processing using Supabase's pgmq queue system with Python worker processes,
+        eliminating 95% of generation errors and reducing platform latency by 30% through efficient distributed processing.
       </p>
     ),
   },
   {
-    date: 'July 2018 - December 2021',
-    location: 'Colt technology',
+    date: 'Feb 2024 - May 2024',
+    location: 'Yunwenverse Media Inc, Vancouver',
+    title: 'Software Engineer',
+    content: (
+      <p>
+        Spearheaded the creation of an interactive data visualization tool with integrated RESTful APIs, driving a 25% increase in user engagement and improving decision-making efficiency.
+        Built a push notification system with AWS SQS and SNS to enable real-time communication, improving system monitoring and performance by 25% using CloudWatch.
+      </p>
+    ),
+  },
+   {
+    date: 'Dec 2021 - Dec 2023',
+    location: 'Infosys, Bangalore',
+    title: 'Software Engineer',
+    content: (
+      <p>
+        Enhanced enterprise platform performance by 42% using server-side rendering and advanced caching strategies, implementing microservices architecture for better scalability.
+        Architected reusable component library using MVC framework with frontend technologies and backend microservices, reducing development time by 30% across multiple teams.
+        Led accessibility compliance project implementing WCAG 2.1 guidelines across distributed frontend services, mentoring junior developers on best practices and code review processes.
+        Orchestrated containerized deployment strategy using Docker and Kubernetes, migrating legacy monolithic systems to microservices architecture, improving scalability by 30%.
+      </p>
+    ),
+  },
+  {
+    date: 'Jul 2018 - Dec 2021',
+    location: 'Colt Technology, Bangalore',
     title: 'Engineer',
     content: (
       <p>
-        Designed UI elements with ReactJS, streamlined Git workflows, ensured backend security with JWT, developed npm modules, expertly debugged single-page apps,
-        and reduced UI bugs by 40% using Jest and Cypress testing.
+        Developed responsive, mobile-first UI components for Colt's online platform, improving accessibility and usability with modern frontend technologies and adaptive layouts, resulting in a 25% increase in user engagement.
+        Automated development workflows with GitLab CI/CD and AWS integration, reducing merge conflicts by 25%, deployment times by 40%, and improving team efficiency by 20%.
+        Implemented server-side rendering and integrated JWT and RESTful HTTPS protocols for secure platform operations, ensuring compliance with industry-standard security practices.
+        Applied advanced debugging techniques in single-page applications to improve software reliability, reducing UI bugs by 40% through comprehensive testing methodologies.
+      </p>
+    ),
+  },
+  {
+    date: 'Feb 2017 - Jun 2018',
+    location: 'Ericsson Global, Bangalore',
+    title: 'Assistant Engineer',
+    content: (
+      <p>
+        Worked on the operation of L2 networks for Virgin Media, managing and maintaining network infrastructure including switches from Nortel, Nokia, and other telecom equipment.
+        Operated and troubleshooted various network systems including Tellabs ECI and other telecom systems, ensuring optimal network performance and reliability.
+        Maintained network operations and provided technical support for telecommunications infrastructure, contributing to stable and efficient network services.
       </p>
     ),
   },
