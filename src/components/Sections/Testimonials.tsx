@@ -1,68 +1,10 @@
-import classNames from 'classnames';
-import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {FC, memo} from 'react';
 
-import {isApple, isMobile} from '../../config';
-import {SectionId, testimonial} from '../../data/data';
+import {testimonial} from '../../data/data';
 // import {Testimonial} from '../../data/dataDef';
-import useInterval from '../../hooks/useInterval';
-import useWindow from '../../hooks/useWindow';
-import QuoteIcon from '../Icon/QuoteIcon';
-import Section from '../Layout/Section';
 
 const Testimonials: FC = memo(() => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [scrollValue, setScrollValue] = useState(0);
-  const [parallaxEnabled, setParallaxEnabled] = useState(false);
-
-  const itemWidth = useRef(0);
-  const scrollContainer = useRef<HTMLDivElement>(null);
-
-  const {width} = useWindow();
-
-  const {imageSrc, testimonials} = testimonial;
-
-  const resolveSrc = useMemo(() => {
-    if (!imageSrc) return undefined;
-    return typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
-  }, [imageSrc]);
-
-  // Mobile iOS doesn't allow background-fixed elements
-  useEffect(() => {
-    setParallaxEnabled(!(isMobile && isApple));
-  }, []);
-
-  useEffect(() => {
-    itemWidth.current = scrollContainer.current ? scrollContainer.current.offsetWidth : 0;
-  }, [width]);
-
-  useEffect(() => {
-    if (scrollContainer.current) {
-      const newIndex = Math.round(scrollContainer.current.scrollLeft / itemWidth.current);
-      setActiveIndex(newIndex);
-    }
-  }, [itemWidth, scrollValue]);
-
-  const setTestimonial = useCallback(
-    (index: number) => () => {
-      if (scrollContainer !== null && scrollContainer.current !== null) {
-        scrollContainer.current.scrollLeft = itemWidth.current * index;
-      }
-    },
-    [],
-  );
-  const next = useCallback(() => {
-    if (activeIndex + 1 === testimonials.length) {
-      setTestimonial(0)();
-    } else {
-      setTestimonial(activeIndex + 1)();
-    }
-  }, [activeIndex, setTestimonial, testimonials.length]);
-
-  const handleScroll = useCallback<UIEventHandler<HTMLDivElement>>(event => {
-    setScrollValue(event.currentTarget.scrollLeft);
-  }, []);
-
-  useInterval(next, 10000);
+  const {testimonials} = testimonial;
 
   // If no testimonials, don't render the section
   if (!testimonials.length) {
