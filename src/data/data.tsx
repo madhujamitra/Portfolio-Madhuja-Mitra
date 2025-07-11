@@ -94,8 +94,6 @@ export const aboutData: About = {
   description: `I am a dedicated Software Engineer specializing in AI-powered applications and full-stack development with expertise in React, Next.js, TypeScript, Node.js, Python, and cloud technologies. Throughout my career, I've architected scalable microservices, implemented advanced prompt engineering solutions, and integrated cutting-edge LLM APIs including OpenAI GPT and Google Gemini. My technical expertise spans containerization with Docker and Kubernetes, serverless architectures, and real-time data processing systems. With a degree in Electronics and Communication from Dr. A. P. J. Abdul Kalam Technical University and a Diploma in Software Engineering from BrainStation, I continuously evolve with emerging technologies, particularly in artificial intelligence and machine learning. My experience includes building AI-driven content generation platforms, optimizing distributed systems for performance, and leading cross-functional teams in delivering innovative digital solutions that drive measurable business impact.`,
       aboutItems: [
       {label: 'Location', text: 'Vancouver, BC', Icon: MapIcon},
-      {label: 'Age', text: '30', Icon: CalendarIcon},
-      {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
       {label: 'Specialization', text: 'AI/ML, Full-Stack Development, Cloud Architecture', Icon: SparklesIcon},
     // {label: 'Study', text: 'Diploma in Software Enginnering From Brainstation', Icon: AcademicCapIcon},
     // // {label: 'Employment', text: 'Infosys', Icon: BuildingOffice2Icon},
